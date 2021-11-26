@@ -12,9 +12,10 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/expenses" element={<Expemses />} />
-        <Route path="invoices" element={<Invoices />} />
+        <Route path="/" element={<App />}>
+          <Route path="/expenses" element={<Expemses />} />
+          <Route path="/invoices" element={<Invoices />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

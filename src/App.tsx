@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 function App() {
   return (
@@ -26,6 +26,7 @@ function App() {
           <Link to="/expenses">Expenses</Link> |{" "}
           <Link to="/invoices">Invoices</Link>
         </nav>
+        <Outlet />
       </main>
     </div>
   );

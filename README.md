@@ -1,3 +1,7 @@
+# React Router V6
+
+React Router v5 -> v6 の変更が大きかったので、実験場を作りました。
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

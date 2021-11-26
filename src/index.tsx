@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Expemses from "./routes/expenses";
 import Invoices from "./routes/invoices";
+import Invoice from "./routes/invoice";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,7 +15,17 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route path="/expenses" element={<Expemses />} />
-          <Route path="/invoices" element={<Invoices />} />
+          <Route path="/invoices" element={<Invoices />}>
+            <Route
+              index
+              element={
+                <main style={{ padding: "1rem" }}>
+                  <p>Select an invoice</p>
+                </main>
+              }
+            />
+            <Route path=":invoiceId" element={<Invoice />} />
+          </Route>
           <Route
             path="*"
             element={
